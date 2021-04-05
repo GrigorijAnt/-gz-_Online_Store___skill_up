@@ -1,0 +1,658 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato';
+  /* background: url("../images/background70.png") repeat; */
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.flex-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wrap {
+  width: 100%;
+}
+
+header {
+  border-bottom: 1px #ececec solid;
+}
+.wrap-logo-search, .wrap-basket-account {
+  padding: 24px 0;
+}
+.logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+    display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+    justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+    align-items: center;
+
+  text-decoration: none;
+  font-family: 'Lato';
+  color: #222222;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 32px;
+  letter-spacing: 0.68px;
+}
+.logo img {
+  margin-right: 12px;
+}
+.logo span {
+  color: #f16d7f;
+  font-weight: 800;
+  letter-spacing: 0.68px;
+}
+form[class="search"] {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  margin: 0 25px 0 40px;
+  box-sizing: border-box;
+}
+button[name="browse"] {
+  position: absolute;
+  top: 0;
+  left: : 0;
+  width: 85px;
+  height: 38px;
+  background-color: #f7f7f7;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 32px;
+  letter-spacing: 0.38px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px 0 0 2px;
+  cursor: pointer;
+}
+button[name="browse"]::after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  color: #838383;
+  font-size: 14px;
+  padding-left: 8px;
+}
+button[name="browse"]:focus {
+  outline: none;
+}
+input[name="search"] {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px 0 90px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px 0 0 2px;
+  color: #a4a4a4;
+  font-size: 14px;
+  font-weight: 200;
+}
+input[name="search"]:focus {
+  outline: none;
+}
+button[name="search"] {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 38px;
+  height: 38px;
+  border-left: 1px #e6e6e6 solid;
+  background: none;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+}
+button[name="search"]:focus {
+  outline: none;
+}
+button[name="search"]:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #a4a4a4;
+}
+
+button[name="basket"] {
+  width: 38px;
+  height: 38px;
+  background: url("../images/cart.png") no-repeat 50%;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 25px;
+}
+button[name="basket"]:focus {
+  outline: none;
+}
+
+button[name="account"] {
+  width: 133px;
+  height: 38px;
+  background-color: #f16d7f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.38px;
+  border: none;
+  cursor: pointer;
+}
+button[name="account"]::after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  font-size: 15px;
+  padding-left: 10px;
+}
+button[name="account"]:focus {
+  outline: none;
+}
+
+/* ===================== nav блок навигация. вернее меню ============= */
+
+nav ul {
+  list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+  display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  padding: 12px 11px;
+}
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222222;
+  line-height: 26px;
+  letter-spacing: 0px;
+  padding: 14px 12px;
+}
+nav a:hover {
+  color: #838383;
+  border-bottom: 3px #ef5b70 solid;
+}
+.active_link {
+  border-bottom: 3px #ef5b70 solid;
+}
+/* ===================== slider блок слайдер ============= */
+
+.slider {
+  margin: 0 auto 100px;
+}
+.bg-slid1 {
+background: #e8e8e8;
+}
+.slider-height {
+  background: url("../images/slider.png");
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  height: 613px;
+  display: flex;
+  align-items: center;
+}
+.slogan {
+  border-left: 12px #f16d7f solid;
+  padding-left: 12px;
+}
+.slogan h2, .slogan h3 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 900;
+}
+.slogan h2 {
+  font-size: 60px;
+  line-height: 45px;
+  margin-bottom: 18px;
+}
+.slogan h3 {
+  font-size: 40px;
+  line-height: 30px;
+}
+
+/* ===================== category блок категорий ============= */
+
+.category {
+  line-height: 0;
+  margin-bottom: 100px;
+}
+.baner-left, .baner-right {
+  width: 49.1%;
+}
+.baner-left{
+  margin-right: 1.8%;
+}
+.baner-left div, .baner-right div {
+  margin-bottom: 20px;
+  position: relative;
+}
+.baner-left div:last-child, .baner-right div:last-child {
+  margin-bottom: 0;
+}
+div .badge {
+  margin-bottom: 0;
+  background: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 2px 20px;
+  position: absolute;
+  top: 26px;
+}
+.badge h2:first-child {
+  font-size: 18px;
+  font-weight: 900;
+  color: #222222;
+  padding: 7px 0;
+}
+.badge h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #f16d7f;
+
+}
+.baner-left a, .baner-right a {
+  display: block;
+}
+.category img {
+  width: 100%;
+}
+
+/* ===================== product блок продуктов ============= */
+
+.product {
+  margin-bottom: 100px;
+}
+.product_heder {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.product_heder h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #222222;
+  margin: 15px 0;
+  line-height: 22px;
+}
+.product_heder p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #9f9f9f;
+  margin: 15px 0
+}
+.product_item {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.item {
+  width: 23%;
+  padding-bottom: 4px;
+  margin-bottom: 30px;
+}
+.item:hover {
+  box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.16);
+}
+.item a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  line-height: 0;
+  cursor: zoom-in;
+}
+.wrap_item_img {
+  width: 100%;
+  position: relative;
+}
+.add_to_cart:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url(../images/stripe_black.png); */
+  background: rgba(58, 56, 56, 0.83);
+}
+button[name="add_to_cart"] {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  border: 1px #fff solid;
+  padding: 12px 12px 12px 45px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: url(../images/cart_add.png) no-repeat 10% 50%;
+  cursor: pointer;
+}
+button[name="add_to_cart"]:focus {
+  outline: none
+}
+.item img {
+  width: 100%;
+}
+.item p {
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  padding: 20px 15px;
+  margin: 0;
+  cursor: pointer;
+}
+.item p:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f16d7f;
+  padding-top: 0;
+  cursor: none;
+}
+.product_button {
+  text-align: center;
+  margin-bottom: 100px;
+}
+button[name="all_product"] {
+  padding: 15px;
+  background-color: #f16d7f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.38px;
+  border: none;
+  cursor: pointer;
+}
+button[name="all_product"]::after {
+  content: "\f178";
+  font-family: FontAwesome;
+  font-size: 15px;
+  padding-left: 10px;
+}
+button[name="all_product"]:focus {
+  outline: none;
+}
+
+/* ===================== feature блок особенность ============= */
+
+
+.feature {
+  margin-bottom: 100px;
+}
+.feature_wrap {
+  background: #222222;
+  height: 100%;
+}
+.feature .baner {
+  position: relative;
+  width: 67%;
+}
+.feature .baner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:radial-gradient(circle at 75% 45%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.25)35%,
+    rgba(0, 0, 0, 0.40)50%,
+    rgba(0, 0, 0, 0.53)100%);
+  background-repeat: no-repeat;
+  }
+.feature .baner img {
+  width: 100%;
+  height: 100%;
+}
+.feature .baner h2 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 10;
+  font-size: 54px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 36px;
+}
+.feature .baner h2 span:first-child {
+  color: #f16d7f;
+}
+.feature .baner h2 span:last-child {
+  font-size: 32px;
+}
+
+.feature_boxes {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  width: 33%;
+  height: 100%;
+  padding: 0 35px;
+}
+.feature_box {
+  padding-left: 75px;
+}
+.feature_delivery {
+  background: url(../images/feature_delivery.png) no-repeat 0 10%;
+}
+.feature_sales {
+  background: url(../images/feature_sales.png) no-repeat 0 10%;
+}
+.feature_quality {
+  background: url(../images/feature_quality.png) no-repeat 0 10%;
+}
+.feature_box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 15px 0;
+}
+.feature_box p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* ===================== subscribe блок подписатся ============= */
+
+
+.subscribe {
+  background: url(../images/subscribe.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* max-width: 1600px; */
+  height: 438px;
+  margin: 0 auto 100px auto;
+}
+.subscribe_wrap {
+  background: rgba(242, 242, 242, 0.5);
+}
+.subscribe_left, .subscribe_right {
+  width: 50%;
+  height: 438px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subscribe_face {
+  position: absolute;
+  overflow: hidden;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.subscribe_face img {
+  width: 100%;
+}
+.subscribe_coment {
+  margin:0 30px 0 110px;
+}
+.subscribe_coment p {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: #222222;
+  line-height: 26px;
+}
+.subscribe_coment p:last-of-type {
+  font-style: normal;
+  color: #f16d7f;
+  line-height: 13px;
+}
+.subscribe_coment span {
+  font-size: 12px;
+  color: #222222;
+}
+.subscribe nav a {
+  margin-right: 12px;
+  padding: 5px 20px;
+  border-bottom: 4px #d6d6d6 solid;
+}
+.subscribe nav a:hover {
+  border-bottom: 4px #f16d7f solid;
+}
+.subscribe nav .current {
+  border-bottom: 4px #f16d7f solid;
+}
+
+.subscribe_right {
+  text-align: center;
+  border-left: 1px #e3e3e3 solid;
+}
+.subscribe_right h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+}
+.subscribe_right span {
+  font-size: 14px;
+}
+.subscribe_form {
+  position: relative;
+  display: inline-block;
+  width: 390px;
+}
+.subscribe_form input {
+  width: 100%;
+  height: 48px;
+  border-radius: 24px;
+  padding: 0 110px 0 25px;
+  background: #e1e1e1;
+  color: #222222;
+}
+.subscribe_form button {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 48px;
+  border-radius: 0 24px 24px 0;
+  background: #f16d7f;
+  color: #fff;
+  cursor: pointer;
+}
+.subscribe_form input:focus, .subscribe_form button:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+.copyright {
+  margin-top: 100px;
+  background: #e6e6e6;
+}
+.copyright p {
+  margin: 31px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7a7a7a;
+}
+.social_icon {
+display: inline-flex;
+flex-flow: row wrap;
+}
+.social_icon a {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  padding: 9px 6px;
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #b2b2b2;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.social_icon a:hover{
+  background: #f16d7f;
+}
+.facebook::before {
+  content: "\f09a";
+}
+.twitter::before {
+  content: "\f099";
+}
+.linkedin::before {
+  content: "\f0e1";
+}
+.pinterest::before {
+  content: "\f0d2";
+}
+.google_plus::before {
+  content: "\f0d5";
+}
+
+
+
+
+
+
+
+
+
+
+/* . */
