@@ -129,7 +129,7 @@ button[name="browse"]:focus {
   outline: none;
 }
 
-form[class="search"] {
+form[id="search"] {
   position: relative;
   display: inline-block;
   width: 315px;
