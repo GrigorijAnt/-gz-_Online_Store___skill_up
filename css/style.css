@@ -38,12 +38,6 @@ body {
 .wrap {
   width: 100%;
 }
-.width_40 {
-  width: 40%;
-}
-.width_20 {
-  width: 20%
-}
 
 header {
   border-bottom: 1px #ececec solid;
@@ -173,13 +167,11 @@ button[name="search"]:before {
 }
 .cart_wrap {
   position: relative;
-  padding: 8px 0;
 }
 .cart {
   display: none;
   position: absolute;
   width: 260px;
-  margin-top: 8px;
   padding: 10px 15px;
   border-radius: 3px;
   border: 1px solid #e9e9e9;
@@ -191,43 +183,41 @@ button[name="search"]:before {
   border-bottom: 1px solid #f2f2f2;
 }
 .cart_product img {
-  width: 100%;
+  width: 40%;
   padding-right: 10px;
 }
 .cart_product h3 {
+  width: 40%;
   font-size: 12px;
   font-weight: 600;
   color: #222222;
   text-transform: uppercase;
 }
-.cart_product .star::before {
-  content: "\f005\f005\f005\f005\f089";
+.cart_product span::before {
+  content: "\f005\f005\f005\f005\f123";
   font-family: FontAwesome;
   font-size: 14px;
   color: #e4af48;
   text-transform: uppercase;
 }
-.cart_product p {
+.cart_product span {
   font-size: 12px;
   font-weight: 400;
   color: #f16d7f;
   text-transform: uppercase;
 }
-.cart_product_delete::after {
+.cart_product p::before {
   content: "\f057";
+  width: 20%;
   font-family: FontAwesome;
   font-size: 16px;
   color: #c0c0c0;
-  display: block;
-  text-align: right;
 }
-.cart_product_delete:hover::after {
+.cart_product p:hover::before {
   color: #f16d7f;
 }
 .cart_total {
- margin: 20px 0;
-}
-.cart_total p {
+  margin: 20px 0;
   font-size: 16px;
   font-weight: 600;
   color: #222222;
@@ -243,6 +233,7 @@ button[name="search"]:before {
   list-style: none;
   width: 100%;
   margin: 10px 0;
+  padding: 0;
 }
 .cart_button a {
   display: block;
@@ -252,6 +243,7 @@ button[name="search"]:before {
   font-size: 14px;
   font-weight: 600;
   color: #4a4a4a;
+  line-height: normal;
   text-transform: uppercase;
 }
 .cart_button a:hover {
@@ -260,7 +252,7 @@ button[name="search"]:before {
 }
 button[name="basket"] {
   width: 38px;
-  height: 38px;
+  height: 49px;
   background: url("../images/cart.png") no-repeat 50%;
   cursor: pointer;
   padding: 0;
@@ -294,33 +286,35 @@ button[name="account"]:focus {
 
 /* ===================== nav блок навигация. вернее меню ============= */
 
+nav .flex_block_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+justify-content: center;
+}
 nav ul {
   list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-  display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
 nav li {
-  padding: 12px 11px;
+  padding: 0 11px;
 }
 nav a {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
   color: #222222;
-  line-height: 26px;
-  letter-spacing: 0px;
-  padding: 14px 12px;
+  padding: 16px 12px;
+  border-bottom: 3px solid transparent;
 }
 nav a:hover {
   color: #838383;
@@ -334,9 +328,7 @@ nav a:hover {
 li:hover .mega_menu, li:hover .arrow {
   display: block;
 }
-.men {
-  position: relative;
-}
+
 .mega_menu, .drop_down {
   display: none;
   position: absolute;
@@ -345,9 +337,6 @@ li:hover .mega_menu, li:hover .arrow {
   border: 1px solid #e9e9e9;
   background: #fff;
   z-index: 10;
-}
-.mega_menu {
-  margin-top: 8px;
 }
 .aling_flex_start {
   -webkit-box-align: start;
@@ -360,7 +349,7 @@ li:hover .mega_menu, li:hover .arrow {
   position: absolute;
   width: 0;
   height: 0;
-  top: 1px;
+  top: -7px;
   left: 50%;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
@@ -368,7 +357,6 @@ li:hover .mega_menu, li:hover .arrow {
   z-index: 20;
 }
 .browse_wrap .arrow {
-  top: -7px;
   left: 82%;
 }
 .arrow_bg {
@@ -390,7 +378,7 @@ li:hover .mega_menu, li:hover .arrow {
   width: 230px;
   padding: 0 12px;
 }
-.mega_menu nav, .drop_down nav {
+.mega_menu ul, .drop_down ul {
   margin-bottom: 20px;
 }
 .mega_menu h3, .mega_menu a,
@@ -411,6 +399,7 @@ li:hover .mega_menu, li:hover .arrow {
   margin-bottom: 12px;
 }
 .mega_menu a, .drop_down a {
+  display: inline;
   text-transform: none;
   color: #646464;
   padding: 4px 2px;
@@ -779,6 +768,7 @@ button[name="all_product"]:focus {
   color: #222222;
 }
 .subscribe nav a {
+  display: inline;
   margin-right: 12px;
   padding: 5px 20px;
   border-bottom: 4px #d6d6d6 solid;
@@ -858,6 +848,7 @@ button[name="all_product"]:focus {
   padding: 10px 2px;
 }
 .footer_nav a {
+  display: inline;
   padding: 7px 2px;
   font-size: 16px;
   font-weight: 400;
