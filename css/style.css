@@ -39,7 +39,7 @@ body {
   width: 100%;
 }
 
-header {
+.header {
   border-bottom: 1px #ececec solid;
 }
 .wrap-logo-search, .wrap-basket-account {
@@ -517,28 +517,30 @@ div .badge {
 .product {
   margin-bottom: 100px;
 }
-.product_heder {
+.product_header {
   text-align: center;
   margin-bottom: 60px;
 }
-.product_heder h2 {
+.product_header h2 {
   font-size: 30px;
   font-weight: 600;
   color: #222222;
   margin: 15px 0;
   line-height: 22px;
 }
-.product_heder p {
+.product_header p {
   font-size: 14px;
   font-weight: 400;
   color: #9f9f9f;
   margin: 15px 0
 }
+
 .product_item {
   width: 100%;
   margin-bottom: 30px;
 }
 .item {
+  position: relative;
   width: 23%;
   padding-bottom: 4px;
   margin-bottom: 30px;
@@ -546,35 +548,16 @@ div .badge {
 .item:hover {
   box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.16);
 }
-.item a {
+.item:hover .add_to_cart {
   display: block;
-  text-decoration: none;
-  outline: none;
-  line-height: 0;
-  cursor: zoom-in;
 }
-.wrap_item_img {
-  width: 100%;
-  position: relative;
-}
-.add_to_cart:hover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: url(../images/stripe_black.png); */
-  background: rgba(58, 56, 56, 0.83);
-}
-.add_to_cart:hover button[name="add_to_cart"] {
-  display: block;
+.add_to_cart {
+  display: none;
 }
 button[name="add_to_cart"] {
-  display: none;
   transform: translate(-50%, -50%);
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   z-index: 10;
   border: 1px #fff solid;
@@ -588,8 +571,36 @@ button[name="add_to_cart"] {
 button[name="add_to_cart"]:focus {
   outline: none
 }
+.item a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  line-height: 0;
+  cursor: zoom-in;
+}
+/*-------затемнение картинки. очень гениальное для моего уровня.
+*--------круто прокачался пока изобретал сие чудо. рука не поднялась удалить.
+*--------но IT-прогресс не стоит на месте...
+*--------встречаем, img filter. // незнаю уж насколько это кроссбраузерно
+/* .wrap_item_img {
+  position: relative;
+}
+.item:hover .wrap_item_img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  /* background: url(../images/stripe_black.png); */
+  /*background: rgba(58, 56, 56, 0.83);
+} */
+
 .item img {
   width: 100%;
+}
+.item:hover img {
+  -webkit-filter: brightness(60%);
 }
 .item p {
   text-decoration: none;
@@ -600,20 +611,19 @@ button[name="add_to_cart"]:focus {
   color: #222222;
   padding: 20px 15px;
   margin: 0;
-  cursor: pointer;
 }
 .item p:last-child {
   font-size: 16px;
   font-weight: 600;
   color: #f16d7f;
   padding-top: 0;
-  cursor: none;
 }
 .product_button {
-  text-align: center;
-  margin-bottom: 100px;
+
 }
 button[name="all_product"] {
+  display: block;
+  margin: 0 auto;
   padding: 15px;
   background-color: #f16d7f;
   color: #fff;
