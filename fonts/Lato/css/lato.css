@@ -1,4 +1,3 @@
-
 @font-face{
 font-family: 'Lato';
 src: url('../fonts/Lato-Thin.ttf') format('truetype');
@@ -11,7 +10,18 @@ src: url('../fonts/Lato-ThinItalic.ttf') format('truetype');
 font-weight: 100;
 font-style: italic;
 }
-
+@font-face{
+font-family: 'Lato';
+src: url('../fonts/Lato-Thin.ttf') format('truetype');
+font-weight: thin;
+font-style: normal;
+}
+@font-face{
+font-family: 'Lato';
+src: url('../fonts/Lato-ThinItalic.ttf') format('truetype');
+font-weight: thin;
+font-style: italic;
+}
 @font-face{
 font-family: 'Lato';
 src: url('../fonts/Lato-Light.ttf') format('truetype');

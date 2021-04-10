@@ -64,7 +64,7 @@ body {
   font-family: 'Lato';
   color: #222222;
   font-size: 27px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.68px;
 }
@@ -73,7 +73,7 @@ body {
 }
 .logo span {
   color: #f16d7f;
-  font-weight: 800;
+  F
   letter-spacing: 0.68px;
 }
 
@@ -104,7 +104,7 @@ button[name="browse"] {
   background-color: #f7f7f7;
   color: #222222;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.38px;
   border: 1px solid #e6e6e6;
@@ -137,7 +137,7 @@ input[name="search"] {
   border-radius: 0 2px 2px 0;
   color: #a4a4a4;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
 }
 input[name="search"]:focus {
   outline: none;
@@ -839,7 +839,7 @@ button[name="all_product"]:focus {
 }
 .footer_logo_info p {
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
   color: #898989;
   line-height: 24px;
 }
