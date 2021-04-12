@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  line-height: normal;
+}
 body {
   font-family: 'Lato';
   /* background: url("../images/background70.png") repeat; */
@@ -74,6 +78,7 @@ body {
 .logo span {
   color: #f16d7f;
   letter-spacing: 0.68px;
+  font-weight: bold;
 }
 
 .search_wrap {
