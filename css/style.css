@@ -73,7 +73,6 @@ body {
 }
 .logo span {
   color: #f16d7f;
-  F
   letter-spacing: 0.68px;
 }
 
@@ -171,6 +170,7 @@ button[name="search"]:before {
 .cart {
   display: none;
   position: absolute;
+  left: -38px;
   width: 260px;
   padding: 10px 15px;
   border-radius: 3px;
@@ -807,6 +807,8 @@ button[name="all_product"]:focus {
   position: relative;
   display: inline-block;
   width: 390px;
+  font-size: 14px;
+  font-weight: normal;
 }
 .subscribe_form input {
   width: 100%;
@@ -875,7 +877,7 @@ button[name="all_product"]:focus {
 .copyright p {
   margin: 31px 0;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: normal;
   color: #7a7a7a;
 }
 .social_icon {
