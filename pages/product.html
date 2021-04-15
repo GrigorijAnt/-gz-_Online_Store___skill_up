@@ -1,8 +1,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../fonts/lato/css/lato.css">
     <link rel="stylesheet" href="../fonts/font_awesome_4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap_4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <!--[if lt IE 9]>
@@ -96,9 +99,8 @@
     </header>
 
 
-
     <div class="container">
-      <nav>
+      <nav class="nav">
         <ul class="flex_block_center">
           <li><a href="#" class="active_link">home</a></li>
           <li><a href="../pages/product.html">man</a>
@@ -164,6 +166,111 @@
         </ul>
       </nav>
     </div>
+
+
+    <nav class="my_breadcrumb" aria-label="breadcrumb">
+      <div class="container row">
+        <h2 class="col-sm-6">New Arrivals</h2>
+        <ul class="breadcrumb col-sm-6">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Men</a></li>
+          <li class="breadcrumb-item active" aria-current="page">New Arrivals</li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container row">
+      <aside class="left_bar col-sm-3">
+        <nav class="category_nav">
+          <button class="menu_hamburger" type="button">
+            Category
+          </button>
+          <ul class="menu_list">
+            <li class="menu_element">
+              <a class="menu_link" href="#">Accessories</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Bags</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Denim</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Hoodies & Sweatshirts</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Jackets & Coats</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Pants</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Polos</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Shirts</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Shoes</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Shorts</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Sweaters & Knits</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">T-Shirts</a>
+            </li>
+            <li class="menu_element">
+              <a class="menu_link" href="#">Tanks</a>
+            </li>
+          </ul>
+          <button class="menu_hamburger" type="button">
+            Brand
+          </button>
+          <button class="menu_hamburger" type="button">
+            Designer
+          </button>
+        </nav>
+      </aside>
+      <main class="col-sm-9">
+        <div class="top_filter row">
+          <div class="trending_now col-4">
+            <h3>Trending now</h3>
+            <div>
+              <a href="#">Bohemian</a>
+              <a href="#">Floral</a>
+              <a href="#">Lace</a>
+            </div>
+            <div>
+              <a href="#">Floral</a>
+              <a href="#">Lace</a>
+              <a href="#">Bohemian</a>
+            </div>
+          </div>
+          <div class="size col-4">
+            <h3>Size </h3>
+            <label><input type="checkbox" name="myCheckbox">XXS</label>
+            <label><input type="checkbox" name="myCheckbox">XS</label>
+            <label><input type="checkbox" name="myCheckbox">S</label>
+            <label><input type="checkbox" name="myCheckbox">M</label>
+            <label><input type="checkbox" name="myCheckbox">L</label>
+            <label><input type="checkbox" name="myCheckbox">XXL</label>
+            <label><input type="checkbox" name="myCheckbox">XXL</label>
+          </div>
+          <div class="price col-4 row">
+            <h3 class="col-12">Price</h3>
+            <input class="col-6" type="range" name="myInput" step="1" value="0" min="0" max="500" required>
+            <input class="col-6" type="range" name="myInput" step="1" value="0" min="501" max="1000" required>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+
 
 
 
@@ -258,6 +365,22 @@
         </div>
       </div>
     </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap_4.6.0\js\bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../bootstrap_4.6.0\js\bootstrap.min.js"></script>
+
+<!-- гамбургер меню -->
+    <script>
+    const hamburger = document.querySelector('.menu_hamburger');
+      if (hamburger) {
+        hamburger.addEventListener('click', function(event) {
+          event.target.closest('.category_nav').classList.toggle('menu_activ');
+        });
+      }
+
+    </script>
 
   </body>
 </html>

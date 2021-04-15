@@ -1,12 +1,21 @@
 * {
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
   line-height: normal;
 }
-body {
+html, body {
   font-family: 'Lato';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  color: #222222;
+  text-align: left;
+  background-color: #fff;
   /* background: url("../images/background70.png") repeat; */
 }
 
@@ -310,13 +319,13 @@ nav ul {
 }
 nav li {
   padding: 0 11px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
 }
 nav a {
   display: block;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
   color: #222222;
   padding: 16px 12px;
   border-bottom: 3px solid transparent;
@@ -468,6 +477,111 @@ background: #e8e8e8;
 .slogan h3 {
   font-size: 40px;
   line-height: 30px;
+}
+
+
+/* ===================== breadcrumb блок хлебные крошки ============= */
+
+.my_breadcrumb {
+  width: 100%;
+  margin-bottom: 60px;
+  background: #f8f3f4;
+}
+.my_breadcrumb h2 {
+  margin: 0;
+  padding: 60px 0;
+  line-height: normal;
+  font-size: 1.7142857143rem;
+  font-weight: 900;
+  color: #f16d7f;
+  text-transform: uppercase;
+}
+.breadcrumb {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 10px 0;
+  background: #f8f3f4;
+}
+.breadcrumb li {
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #636363;
+}
+.breadcrumb-item::before, .breadcrumb-item .active::before {
+  padding: 0 .21rem;
+}
+.breadcrumb .active {
+  font-weight: normal;
+  color: #f16d7f;
+}
+.breadcrumb a {
+  display: inline;
+  border: none;
+  padding: 0;
+}
+
+/* ===================== category_nav блок меню сайт-бар ============= */
+
+.menu_hamburger {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6f6e6e;
+  text-align: left;
+  text-transform: uppercase;
+  border-left: 5px solid #ef5b70;
+  border-bottom: 1px solid #ebebeb;
+  background: none;
+}
+.menu_hamburger::after {
+  content: "\f0d7";
+  font-family: 'FontAwesome';
+  padding: 0 7px;
+  float: right;
+}
+.menu_hamburger:focus {
+  color: #ef5b70;
+  outline: none;
+}
+.menu_hamburger:focus::after {
+  content: "\f0d8";
+}
+.menu_hamburger:focus {
+  color: #ef5b70;
+  outline: none;
+}
+.menu_activ .menu_list {
+  display: block;
+}
+.menu_list {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.menu_element {
+  padding: 0 8px 0 16px;
+  font-weight: normal;
+  text-transform: none;
+}
+.menu_link {
+  padding: 20px 2px 0;
+  color: #6f6e6e;
+  border-bottom: 1px solid transparent;
+}
+.menu_link:hover {
+  border-bottom: 1px solid #ef5b70;
+}
+
+/* ===================== top_filter блок верхний фильтр категорий ============= */
+.top_filter .price input {
+  -webkit-appearance: none;
+  width: 50%;
 }
 
 /* ===================== category блок категорий ============= */
