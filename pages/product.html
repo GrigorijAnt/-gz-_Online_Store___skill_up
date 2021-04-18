@@ -99,10 +99,10 @@
     </header>
 
 
-    <div class="container">
+    <div class="container flex_block_center">
       <nav class="nav">
         <ul class="flex_block_center">
-          <li><a href="#" class="active_link">home</a></li>
+          <li><a href="../index.html" class="active_link">home</a></li>
           <li><a href="../pages/product.html">man</a>
             <div class="mega_menu">
               <div class="flex_block aling_flex_start">
@@ -158,11 +158,11 @@
               </div>
             </div>
           </li>
-          <li><a href="#">women</a></li>
-          <li><a href="#">kids</a></li>
-          <li><a href="#">accoseriese</a></li>
-          <li><a href="#">featured</a></li>
-          <li><a href="#">hot deals</a></li>
+          <li><a href="../pages/product.html">women</a></li>
+          <li><a href="../pages/product.html">kids</a></li>
+          <li><a href="../pages/product.html">accoseriese</a></li>
+          <li><a href="../pages/product.html">featured</a></li>
+          <li><a href="../pages/product.html">hot deals</a></li>
         </ul>
       </nav>
     </div>
@@ -243,8 +243,6 @@
               <a href="#">Bohemian</a>
               <a href="#">Floral</a>
               <a href="#">Lace</a>
-            </div>
-            <div>
               <a href="#">Floral</a>
               <a href="#">Lace</a>
               <a href="#">Bohemian</a>
@@ -252,25 +250,225 @@
           </div>
           <div class="size col-4">
             <h3>Size </h3>
-            <label><input type="checkbox" name="myCheckbox">XXS</label>
-            <label><input type="checkbox" name="myCheckbox">XS</label>
-            <label><input type="checkbox" name="myCheckbox">S</label>
-            <label><input type="checkbox" name="myCheckbox">M</label>
-            <label><input type="checkbox" name="myCheckbox">L</label>
-            <label><input type="checkbox" name="myCheckbox">XXL</label>
-            <label><input type="checkbox" name="myCheckbox">XXL</label>
+            <input type="checkbox" name="myCheckbox" id="size1">
+            <label for="size1">XXS</label>
+            <input type="checkbox" name="myCheckbox" id="size2">
+            <label for="size2">XS</label>
+            <input type="checkbox" name="myCheckbox" id="size3">
+            <label for="size3">S</label>
+            <input type="checkbox" name="myCheckbox" id="size4">
+            <label for="size4">M</label>
+            <input type="checkbox" name="myCheckbox" id="size5">
+            <label for="size5">L</label>
+            <input type="checkbox" name="myCheckbox" id="size6">
+            <label for="size6">XL</label>
+            <input type="checkbox" name="myCheckbox" id="size7">
+            <label for="size7">XXL</label>
           </div>
           <div class="price col-4 row">
-            <h3 class="col-12">Price</h3>
-            <input class="col-6" type="range" name="myInput" step="1" value="0" min="0" max="500" required>
-            <input class="col-6" type="range" name="myInput" step="1" value="0" min="501" max="1000" required>
+            <h3>Price</h3>
+            <div class="price_range">
+              <input type="range" min="0" step="1" max="600" value="52">
+              <input type="range" min="0" step="1" max="600" value="400">
+            </div>
+            <div class="price_value ">
+              <label for="">52$</label>
+              <label for="">400$</label>
+            </div>
           </div>
         </div>
-      </main>
+        <div class="sort_line row">
+          <p class="sort_by">
+            Sort by
+            <select name="sort_by">
+              <option value="name">Name</option>
+              <option value="color">Color</option>
+              <option value="price">Price</option>
+              <option value="type">Type</option>
+            </select>
+          </p>
+          <p class="show">
+            Show
+            <select name="Show">
+              <option value="09">09</option>
+              <option value="18">18</option>
+              <option value="27">27</option>
+              <option value="36">36</option>
+            </select>
+          </p>
+        </div>
 
+        <section class="product_page">
+            <div class="product_item flex_block">
+
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product01.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product02.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product03.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product04.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product05.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product06.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product07.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product08.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+              <div class="item">
+                <form class="add_to_cart" action="index.html" method="post">
+                  <button type="submit" name="add_to_cart">Add to Cart</button>
+                  <div class="flex_block">
+                    <button type="button" name="retweet"></button>
+                    <button type="button" name="heart"></button>
+                  </div>
+                </form>
+                <a class="wrap_item_img" href="#">
+                    <img src="../images/Product09.png" alt="">
+                </a>
+                <p class="product_name">Mango  People  T-shirt</p>
+                <p class="product_carent">$52.00</p>
+              </div>
+            </div>
+            <footer class="pagination flex_block">
+              <div class="page_product">
+                <button type="button" name="prev"></button>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6...20</a>
+                <button type="button" name="next"></button>
+              </div>
+              <div class="button_view_all">
+                <a href="#">View All</a>
+              </div>
+            </footer>
+        </section>
+      </main>
     </div>
 
 
+
+    <div class="feature_page">
+      <div class="container">
+
+          <div class="flex_block">
+            <div class="feature_box_page feature_delivery">
+              <h3>Free Delivery</h3>
+              <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+            <div class="feature_box_page feature_sales">
+              <h3>Sales & discounts</h3>
+              <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+            <div class="feature_box_page feature_quality">
+              <h3>Quality assurance</h3>
+              <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
 
 
 

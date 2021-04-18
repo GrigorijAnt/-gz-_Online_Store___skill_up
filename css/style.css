@@ -19,6 +19,9 @@ html, body {
   /* background: url("../images/background70.png") repeat; */
 }
 
+.row {
+  margin: 0;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -38,6 +41,18 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+.flex_block_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+justify-content: center;
 }
 .flex_block_col {
   display: -webkit-box;
@@ -140,6 +155,7 @@ form[id="search"] {
   position: relative;
   display: inline-block;
   width: 315px;
+  margin: 0;
   box-sizing: border-box;
 }
 input[name="search"] {
@@ -298,20 +314,8 @@ button[name="account"]:focus {
   outline: none;
 }
 
-/* ===================== nav блок навигация. вернее меню ============= */
+/* ===================== nav блок навигация. верхнее меню ============= */
 
-nav .flex_block_center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-justify-content: center;
-}
 nav ul {
   list-style: none;
   margin: 0;
@@ -579,10 +583,205 @@ background: #e8e8e8;
 }
 
 /* ===================== top_filter блок верхний фильтр категорий ============= */
-.top_filter .price input {
-  -webkit-appearance: none;
-  width: 50%;
+
+.top_filter {
+  margin: 0;
 }
+.top_filter .trending_now,
+.top_filter .size,
+.top_filter .price {
+  padding: 0 15px 0 0;
+}
+.top_filter div:last-child {
+  padding: 0
+}
+.top_filter h3 {
+  margin: 25px 0;
+  padding: 0;
+  color: #6f6e6e;
+  text-transform: uppercase;
+}
+.top_filter .trending_now a {
+  display: inline-block;
+  margin: 0 12px 12px 0;
+  padding-right: 12px;
+  color: #6f6e6e;
+  border-right: 1px solid #dfdfdf;
+}
+.top_filter .trending_now a:hover{
+  color: #ef5b70;
+}
+.top_filter .size input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.top_filter .size input[type="checkbox"]+label {
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+}
+.top_filter .size input[type="checkbox"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 8px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #dfdfdf;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+}
+.top_filter .size input[type="checkbox"]:checked+label::before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  font-size: 0.75rem;
+  text-align: center;
+  vertical-align: text-top;
+  color: #fff;
+  background-color: #f16d7f;
+}
+.top_filter .size input[type="checkbox"]:not(:disabled):not(:checked)+label:hover::before {
+  background: rgba(241, 109, 127, 0.2);
+}
+.top_filter .size input[type="checkbox"]:focus+label::before {
+  box-shadow: 0 0 0 2px rgba(223, 223, 223, 1);
+}
+.top_filter .size label {
+  width: 60px;
+  margin-bottom: 12px;
+  color: #6f6e6e;
+}
+
+/*Стили ползунка. Оформление кроссбраузерных элементов input с типом range*/
+.top_filter .price {
+  display: block;
+}
+.top_filter .price_range {
+  display: flex;
+}
+.top_filter .price input[type=range] {
+  -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+  margin: 14px 0;
+  padding: 0;
+  width: 100%; /* Указание параметра ширины требуется для Firef*/
+}
+.top_filter .price input[type=range]:focus {
+  outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+/* Специальные правила для браузеров на движках WebKit/Blink */
+.top_filter .price input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #f16d7f;
+}
+.top_filter .price input[type=range]:first-of-type::-webkit-slider-runnable-track {
+  border-radius: 3px 0 0 3px;
+}
+.top_filter .price input[type=range]:last-of-type::-webkit-slider-runnable-track {
+  border-radius: 0 3px 3px 0;
+}
+.top_filter .price input[type=range]::-webkit-slider-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #f16d7f;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+/* Тоже самое для Firefox */
+.top_filter .price input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #f16d7f;
+}
+.top_filter .price input[type=range]:first-of-type::-moz-range-track {
+  border-radius: 3px 0 0 3px;
+}
+.top_filter .price input[type=range]:last-of-type::-moz-range-track {
+  border-radius: 0 3px 3px 0;
+}
+.top_filter .price input[type=range]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #f16d7f;
+  cursor: pointer;
+  border: none;
+}
+/* Тоже самое для IE */
+.top_filter .price input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.top_filter .price input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.top_filter .price input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.top_filter .price input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.top_filter .price input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+.top_filter .price input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+.top_filter .price_value {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #6f6e6e;
+}
+
+
+.sort_line {
+  align-items: center;
+  margin: 30px 0 40px 0;
+  padding: 10px 0;
+  background: #f3f3f3;
+}
+.sort_line p {
+  margin: 0 0 0 10px;
+  padding: 0 0 0 10px;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+}
+.sort_line select {
+  padding: 6px 15px 6px 10px;
+  border-left: 1px solid #dfdfdf;
+}
+.sort_line select:focus {
+  outline: none;
+}
+
 
 /* ===================== category блок категорий ============= */
 
@@ -633,7 +832,7 @@ div .badge {
 
 /* ===================== product блок продуктов ============= */
 
-.product {
+.product_home, .product_page {
   margin-bottom: 100px;
 }
 .product_header {
@@ -664,31 +863,56 @@ div .badge {
   padding-bottom: 4px;
   margin-bottom: 30px;
 }
+.product_page .item {
+  width: calc(92.7272727273%/3);
+}
 .item:hover {
   box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.16);
 }
 .item:hover .add_to_cart {
-  display: block;
+  display: inline;
 }
 .add_to_cart {
   display: none;
-}
-button[name="add_to_cart"] {
   transform: translate(-50%, -50%);
   position: absolute;
   top: 40%;
   left: 50%;
+  width: 127px;
   z-index: 10;
+}
+button[name="add_to_cart"],
+button[name="retweet"],
+button[name="heart"] {
+  height: 40px;
+  margin-bottom: 7px;
   border: 1px #fff solid;
-  padding: 12px 12px 12px 45px;
   font-size: 13px;
   font-weight: 600;
   color: #fff;
-  background: url(../images/cart_add.png) no-repeat 10% 50%;
+  background: none;
   cursor: pointer;
+}
+button[name="add_to_cart"] {
+  width: 100%;
+  padding-left: 45px;
+  background: url(../images/cart_add.png) no-repeat 10% 50%;
 }
 button[name="add_to_cart"]:focus {
   outline: none
+}
+button[name="retweet"],
+button[name="heart"] {
+  width: 47%;
+  font-size: 1.5rem;
+}
+button[name="retweet"]::before {
+  content: "\f079";
+  font-family: 'FontAwesome';
+}
+button[name="heart"]::before {
+  content: "\f08a";
+  font-family: 'FontAwesome';
 }
 .item a {
   display: block;
@@ -762,11 +986,57 @@ button[name="all_product"]:focus {
   outline: none;
 }
 
+/* ===================== pagination блок постраничной навигации ============= */
+
+.page_product, .button_view_all {
+  padding: 15px;
+  font-size: 1.14rem;
+  border-radius: 2px;
+}
+.page_product {
+  border: 1px solid #ebebeb;
+}
+.page_product button {
+  background: none;
+}
+.page_product button[name="prev"]::before {
+  content: "\f053";
+  font-family: 'FontAwesome';
+  color: #aaaaaa;
+}
+.page_product button[name="next"]::before {
+  content: "\f054";
+  font-family: 'FontAwesome';
+  color: #ef5b70;
+}
+.page_product a {
+  padding: 0 10px;
+  color: #c4c4c4;
+}
+.page_product a:hover {
+  color: #aaaaaa;
+}
+.page_product a:first-of-type {
+  color: #ef5b70;
+}
+.button_view_all {
+  padding: 15px 30px;
+  border: 1px solid #ef5b70;
+}
+.button_view_all a {
+  color: #ef5b70;
+}
+
+
 /* ===================== feature блок особенность ============= */
 
 
 .feature {
+  width: 100%;
   margin-bottom: 100px;
+}
+.feature_page {
+  background: #222222;
 }
 .feature_wrap {
   background: #222222;
@@ -822,6 +1092,18 @@ button[name="all_product"]:focus {
 .feature_box {
   padding-left: 75px;
 }
+.feature_box_page {
+  display: block;
+  width: 29%;
+  padding: 140px 0 110px;
+  text-align: center;
+}
+.feature_page .feature_delivery,
+.feature_page .feature_sales,
+.feature_page .feature_quality {
+  background-position: 50% 30%;
+}
+
 .feature_delivery {
   background: url(../images/feature_delivery.png) no-repeat 0 10%;
 }
@@ -831,13 +1113,15 @@ button[name="all_product"]:focus {
 .feature_quality {
   background: url(../images/feature_quality.png) no-repeat 0 10%;
 }
-.feature_box h3 {
+.feature_box h3,
+.feature_box_page h3 {
   font-size: 20px;
   font-weight: 600;
   color: #fff;
   margin: 15px 0;
 }
-.feature_box p {
+.feature_box p,
+.feature_box_page p {
   font-size: 14px;
   font-weight: 300;
   color: #fff;
