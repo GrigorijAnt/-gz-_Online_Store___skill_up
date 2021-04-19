@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <!-- Настройка viewport -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="fonts/lato/css/lato.css">
     <link rel="stylesheet" href="fonts/font_awesome_4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="bootstrap_4.6.0/css/bootstrap.min.css">
@@ -20,50 +20,50 @@
 
     <header class="header">
       <div class="container flex_block">
-        <div class="wrap-logo-search flex_block">
-          <a class="logo" href="index.html">
+        <div class="wrap-logo">
+          <a class="logo" href="../index.html">
             <img src="images/logo.png" alt="BrandStyle">
             BRAN<span>D</span>
           </a>
-          <div class="search_wrap">
-            <div class="browse_wrap">
-              <button type="button" name="browse">Browse</button>
-              <div class="drop_down">
+        </div>
+        <div class="search_wrap">
+          <div class="browse_wrap">
+            <button type="button" name="browse">Browse</button>
+            <div class="drop_down">
+              <nav class="drop_down_col">
+                  <h3>Women</h3>
+                  <ul class="flex_block_col">
+                    <li><a href="#">Dresses</a></li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Sweaters/Knits</a></li>
+                    <li><a href="#">Jackets/Coats</a></li>
+                    <li><a href="#">Blazers</a></li>
+                    <li><a href="#">Denim</a></li>
+                    <li><a href="#">Legging/Pants</a></li>
+                    <li><a href="#">Skirts/Shorts</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </nav>
                 <nav class="drop_down_col">
-                    <h3>Women</h3>
-                    <ul class="flex_block_col">
-                      <li><a href="#">Dresses</a></li>
-                      <li><a href="#">Tops</a></li>
-                      <li><a href="#">Sweaters/Knits</a></li>
-                      <li><a href="#">Jackets/Coats</a></li>
-                      <li><a href="#">Blazers</a></li>
-                      <li><a href="#">Denim</a></li>
-                      <li><a href="#">Legging/Pants</a></li>
-                      <li><a href="#">Skirts/Shorts</a></li>
-                      <li><a href="#">Accessories</a></li>
-                    </ul>
-                  </nav>
-                  <nav class="drop_down_col">
-                    <h3>Men</h3>
-                    <ul class="flex_block_col">
-                      <li><a href="#">Dresses</a></li>
-                      <li><a href="#">Tops</a></li>
-                      <li><a href="#">Sweaters/Knits</a></li>
-                      <li><a href="#">Jackets/Coats</a></li>
-                    </ul>
-                  </nav>
-              </div>
-              <div style="position: relative;">
-                <div class="arrow">
-                  <div class="arrow_bg"></div>
-                </div>
+                  <h3>Men</h3>
+                  <ul class="flex_block_col">
+                    <li><a href="#">Dresses</a></li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Sweaters/Knits</a></li>
+                    <li><a href="#">Jackets/Coats</a></li>
+                  </ul>
+                </nav>
+            </div>
+            <div style="position: relative;">
+              <div class="arrow">
+                <div class="arrow_bg"></div>
               </div>
             </div>
-            <form id="search" action="index.html" method="post">
-              <input type="search" name="search" value="" placeholder="Search for Item...">
-              <button type="submit" name="search"></button>
-            </form>
           </div>
+          <form id="search" action="index.html" method="post">
+            <input type="search" name="search" value="" placeholder="Search for Item...">
+            <button type="submit" name="search"></button>
+          </form>
         </div>
 
         <div class="wrap-basket-account flex_block">
@@ -347,7 +347,7 @@
             <h2>30% <span>OFFER</span><br><span>FOR WOMEN</span></h2>
           </div>
 
-          <div class="feature_boxes">
+          <div class="feature_boxes feature_boxes_media">
             <div class="feature_box feature_delivery">
               <h3>Free Delivery</h3>
               <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
@@ -370,7 +370,7 @@
 
     <div class="subscribe">
       <div class="subscribe_wrap">
-      <div class="container flex_block">
+      <div class="container subscribe_media flex_block">
 
         <div class="subscribe_left">
           <div class="wrap_subscribe_left">
@@ -409,11 +409,15 @@
     <footer>
       <div class="container flex_block">
         <div class="footer_logo_info">
-          <a class="logo flex_block" href="#">
-            <img src="images/logo.png" alt="BrandStyle"> BRAN <span>D</span>
-          </a>
-          <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. </p>
-          <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+          <div class="wrap-logo">
+            <a class="logo" href="../index.html">
+              <img src="images/logo.png" alt="BrandStyle">BRAN<span>D</span>
+            </a>
+          </div>
+          <div>
+            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. </p>
+            <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+          </div>
         </div>
         <nav class="company footer_nav">
           <h3>company</h3>
