@@ -101,9 +101,13 @@
 
 
 
-    <div class="container">
-      <nav>
-        <ul class="flex_block_center">
+    <div class="my_nav container">
+
+      <nav class="nav_header">
+        <button class="hamburger" type="button" name="hamburger">
+          <span></span>
+        </button>
+        <ul class="nav_list flex_block_center">
           <li><a href="index.html" class="active_link">home</a></li>
           <li><a href="pages\product.html">man</a>
             <div class="mega_menu">
@@ -167,8 +171,57 @@
           <li><a href="pages\product.html">hot deals</a></li>
         </ul>
       </nav>
+      <div class="search_768"
+        <div class="search_wrap">
+          <div class="browse_wrap">
+            <button type="button" name="browse">Browse</button>
+            <div class="drop_down">
+              <nav class="drop_down_col">
+                  <h3>Women</h3>
+                  <ul class="flex_block_col">
+                    <li><a href="#">Dresses</a></li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Sweaters/Knits</a></li>
+                    <li><a href="#">Jackets/Coats</a></li>
+                    <li><a href="#">Blazers</a></li>
+                    <li><a href="#">Denim</a></li>
+                    <li><a href="#">Legging/Pants</a></li>
+                    <li><a href="#">Skirts/Shorts</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </nav>
+                <nav class="drop_down_col">
+                  <h3>Men</h3>
+                  <ul class="flex_block_col">
+                    <li><a href="#">Dresses</a></li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Sweaters/Knits</a></li>
+                    <li><a href="#">Jackets/Coats</a></li>
+                  </ul>
+                </nav>
+            </div>
+            <div style="position: relative;">
+              <div class="arrow">
+                <div class="arrow_bg"></div>
+              </div>
+            </div>
+          </div>
+          <form id="search" action="index.html" method="post">
+            <input type="search" name="search" value="" placeholder="Search for Item...">
+            <button type="submit" name="search"></button>
+          </form>
+        </div>
+      </div>
     </div>
 
+<script type="text/javascript">
+  const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.addEventListener('click', function (event){
+        event.target.closest('.nav_header').classList.toggle('nav_active');
+      });
+    }
+</script>
 
 
     <div class="slider">
